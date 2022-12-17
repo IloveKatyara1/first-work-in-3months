@@ -1,0 +1,245 @@
+.header {
+    width: 100%;
+    height: 53px;
+    background: #212121;
+    position: fixed;
+    z-index: 100;
+
+    nav {
+        padding: 0 180px;
+    }
+
+    &__hamburger {
+        display: none;
+
+    }
+
+    &__menu {
+        display: flex;
+        margin-bottom: 0rem;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        &_item {
+            list-style-type: none;
+            border-right: 1px dashed #000000;
+
+            a {
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 15px;
+                text-decoration: none;
+                color: white;
+                line-height: 32px;
+                padding-right: 30px;
+            }
+
+            &:last-child {
+                border: none;
+            }
+
+        }
+    }
+}
+
+.subheader {
+    height: 62px;
+    width: 100%;
+    background: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+    position: absolute;
+    top: 53px;
+    
+    .container {
+        
+        .subheader-right {
+            float: left;
+            display: flex;
+            height: 52px;
+            margin-top: 6px;
+    
+            &_logo {
+                margin-right: 11px;
+            }
+             
+            h5 {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 52px;
+                color: white;
+            }
+        }
+        
+        .subheader_btn {
+            float: right;
+            margin-top: 10px;
+            width: 187px;
+            height: 43px;
+            background: #29EBF8;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            bottom: none;
+        
+            font-weight: 400;
+            font-size: 15px;
+            color: #FFFFFF;
+
+            &:hover {
+                background-color: $btn-hover;
+            }
+        }
+    }
+}
+
+.delete {
+    height: 1000px;
+}
+
+@media (max-width: 1400px) {
+    .header {
+
+        nav {
+            padding: 0 100px;
+        }
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .header {
+
+        nav {
+            padding: 0;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+
+        &__menu {
+
+            &_item {
+
+                a {
+                    font-size: 12px;
+                    padding-right: 17px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+ 
+        &__menu {
+            position: fixed;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            transition: 0.6s all;
+            flex-direction: column;
+            justify-content: space-around;
+
+            &_active {
+                left: 0;
+            }
+
+            &_item {
+                text-align: center;
+                border: none;
+                height: 40px;
+
+                a {
+                    font-size: 18px;
+                    padding: 0;
+                }
+            }
+        }
+
+        &__hamburger {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 50%;
+            right: 11px;
+            transform: translateY(-50%);
+            height: 10px;
+            justify-content: space-between;
+
+            span {
+                width: 26px;
+                height: 2px;
+                background: #FFFFFF;
+                transition: 0.6s all;
+            }
+
+        }
+        &__hamburger_active {
+
+            span:nth-child(1) {
+                transform: translateY(3px) rotate(45deg);
+            }
+
+            span:nth-child(2) {
+                display: none;
+            }
+
+            span:nth-child(3) {
+                transform: translateY(-4px) rotate(-45deg);
+            }
+        }
+    }
+    .subheader .container .subheader_btn {
+        margin-top: 12px;
+        width: 175px;
+        height: 40px;
+    }
+}
+
+@media  (max-width: 575px) {
+    .header {
+        height: 32px;
+
+        &__menu {
+            width: 75%;
+        }
+    }
+    .subheader {
+        top: 32px;
+
+        .container {
+
+            .subheader-right {
+                margin-top: 8px;
+
+                &_logo {
+                    margin-right: 5px;
+
+                    img {
+                        width: 45px;
+                    }
+                }
+
+                h5 {
+                    font-size: 13px;
+                }
+            }
+
+            .subheader_btn {
+                margin-top: 18px;
+                width: 130px;
+                height: 30px;
+                
+                font-size: 13px;
+
+                &:hover {
+                    background-color: $base-color;
+                }
+            }
+        }
+    }
+}

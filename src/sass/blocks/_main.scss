@@ -1,0 +1,126 @@
+.main-sct {
+    display: grid;
+
+    .main {
+        background-image: url(../../img/backround_main.jpg);
+        // height: 711px;
+        background-repeat: no-repeat;
+        background-size: 100% 763px;
+
+        h1 {
+            margin: 142px 0 0px 0;
+            font-weight: 400;
+            font-size: 55px;
+            line-height: 67px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        &_subh1 {
+            font-weight: 400;
+            font-size: 45px;
+            line-height: 54px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        &_btn {
+            width: 225px;
+            height: 50px;
+            display: block;
+            border: none;
+            margin: 103px auto 57px auto;
+            background: $base-color;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+
+            font-weight: 400;
+            font-size: 18px;
+            color: #FFFFFF;
+
+            &:hover {
+                background-color: $btn-hover;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .main-sct {
+    
+        .main {
+
+            h1 {
+                font-size: 50px;
+            }
+
+            &_subh1 {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .main-sct {
+    
+        .main {
+
+            h1 {
+                font-size: 40px;
+            }
+
+            &_subh1 {
+                font-size: 35px;
+            }
+
+            &_btn {
+                margin: 80px auto 50px auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .main-sct {
+    
+        .main {
+
+            h1 {
+                font-size: 35px;
+            }
+
+            &_subh1 {
+                font-size: 30px;
+            }
+
+            &_btn {
+                margin: 70px auto 40px auto;
+
+                &:hover {
+                    background-color: $base-color;
+                }
+            }
+        }
+    }
+}
+
+@media  (max-width: 575px) {
+    .main-sct {
+    
+        .main {
+
+            h1 {
+                font-size: 28px;
+            }
+
+            &_subh1 {
+                font-size: 25px;
+            }
+
+            &_btn {
+                margin: 70px auto 40px auto;
+            }
+        }
+    }
+}

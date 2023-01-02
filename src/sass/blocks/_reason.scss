@@ -1,0 +1,50 @@
+.reasons-sct {
+    background-image: url(../../img/backround_reason.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: grid;
+
+    .reason {
+
+        h4 {
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 30px;
+            color: $base-color;
+            text-align: center;
+        }
+        &__circle {
+            margin: 32px auto 45px auto;
+        }
+        p {
+            margin-bottom: 40px;
+
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 21px;
+            text-align: center;
+            color: #000000;            
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .reasons-sct {
+
+        .reason {
+            padding: 0 13px;
+        }
+    } 
+}
+
+@media (max-width: 991px) {
+    .reasons-sct {
+    
+        .reason {
+    
+            &__circle {
+                margin: 20px auto 30px auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.people-need-sct {
+    background-image: url(../../img/backround_people.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: grid;
+}
+
+.people-need__circle {
+    margin-bottom: 15px;
+    margin: 0 auto;
+}
+
+.programer {
+    color: $base-color;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+}
+
+.designer {
+    color: $designer-color;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+}
